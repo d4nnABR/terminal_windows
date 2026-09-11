@@ -14,6 +14,7 @@ oh-my-posh/liquid-glass.omp.json            -> tema alternativo
 fastfetch/glass.jsonc                       -> config de fastfetch (logo + módulos)
 fastfetch/logo.txt                          -> logo ASCII custom (bandera Windows)
 restore.ps1                                 -> copia todo a las rutas correctas
+bootstrap.ps1                               -> instala dependencias (portable, sin admin) + restore
 ```
 
 ## Requisitos previos
@@ -39,9 +40,26 @@ restore.ps1                                 -> copia todo a las rutas correctas
 git clone https://github.com/<usuario>/<repo>.git
 cd TerminalSetup
 
-# 2. Ejecuta el restaurador (hace backup de lo existente)
+# 2a. Todo automático: instala dependencias (portable, sin admin) + restaura config
+pwsh -File .\bootstrap.ps1
+
+# 2b. O solo restore, si ya tienes las dependencias instaladas
 pwsh -File .\restore.ps1
 ```
+
+`bootstrap.ps1` instala desde releases oficiales de GitHub (sin admin) en
+`<BaseDir>\Tools` (por defecto `%USERPROFILE%\Downloads\Projects\Tools`):
+
+- **PowerShell 7** portable
+- **oh-my-posh** (exe)
+- **fastfetch** (zip)
+- **Nerd Font CaskaydiaCove** → fuentes de usuario (`%LOCALAPPDATA%\...\Fonts`)
+
+Luego actualiza el PATH de usuario, ejecuta `restore.ps1` y ajusta las rutas
+absolutas del perfil (`C:\Users\gary.abrigo` → tu usuario actual).
+
+Opciones: `-Yes` (sin preguntas), `-SkipFont`, `-SkipPwsh`, `-BaseDir <ruta>`.
+
 
 ## Notas importantes
 

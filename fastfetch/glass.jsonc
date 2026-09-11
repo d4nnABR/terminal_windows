@@ -1,0 +1,32 @@
+// fastfetch - config personalizada (CMI)
+//
+// LOGO: "type": "small" (Windows pequeno, actual)
+//       "type": "builtin", "source": "Windows" / "Windows 11"
+//       "type": "none"
+//       "type": "file", "source": "C:/Users/gary.abrigo/.config/fastfetch/logo.txt"
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "small",
+        "padding": { "top": 1, "left": 2, "right": 1 }
+    },
+    "display": {
+        "separator": "",
+        "key": { "width": 15 }
+    },
+    "modules": [
+        { "key": " hname",    "type": "title",          "format": "{host-name}", "keyColor": "32" },
+        { "key": " kernel",  "type": "kernel",         "keyColor": "33" },
+        { "key": " host",   "type": "host",           "keyColor": "34" },
+        { "key": " shell",    "type": "shell",          "keyColor": "35" },
+        { "key": " cpu",     "type": "cpu",            "showPeCoreCount": true, "keyColor": "36" },
+        { "key": " memory",  "type": "memory",         "keyColor": "31" },
+        { "key": " swap",     "type": "swap",           "keyColor": "32" },
+        { "key": " phys mem", "type": "physicalmemory", "keyColor": "33" },
+        { "key": " disk",    "type": "disk",  "folders": "/", "keyColor": "34" },
+        { "key": " wifi",   "type": "wifi",           "keyColor": "35" },
+        { "key": " dns",     "type": "dns",            "keyColor": "36" },
+        { "key": " battery", "type": "battery",        "keyColor": "31" },
+        { "key": " process", "type": "processes",      "keyColor": "32" }
+    ]
+}

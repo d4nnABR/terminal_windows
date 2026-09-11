@@ -1,0 +1,3 @@
+# ─── PERFIL REDIRIGIDO A TOOLS ──────────────────────────
+# El perfil real vive en: Projects\Tools\pwsh\profile
+. "C:\Users\gary.abrigo\Downloads\Projects\Tools\pwsh\profile\Microsoft.PowerShell_profile.ps1"

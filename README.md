@@ -64,9 +64,6 @@ Opciones: `-Yes` (sin preguntas), `-SkipFont`, `-SkipPwsh`, `-BaseDir <ruta>`.
 ## Notas importantes
 
 - El perfil `Microsoft.PowerShell_profile.ps1` usa **rutas absolutas**
-  (`C:\Users\gary.abrigo\Downloads\Projects\...`) para codex, postgres, dotnet
-  y los temas. En otra PC/usuario hay que ajustarlas o mantener la misma
-  estructura de carpetas `Downloads\Projects`.
 - El tema del prompt actual es **tokyo.omp.json**; `liquid-glass.omp.json` es
   una alternativa guardada.
 - Windows Terminal: la transparencia "liquid glass" depende de

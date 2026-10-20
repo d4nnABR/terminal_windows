@@ -1,3 +1,18 @@
-# ─── PERFIL REDIRIGIDO A TOOLS ──────────────────────────
-# El perfil real vive en: Projects\Tools\pwsh\profile
-. "C:\Users\usuario\Downloads\Projects\Tools\pwsh\profile\Microsoft.PowerShell_profile.ps1"
+# ─── PERFIL REDIRIGIDO A TOOLS (opcional) ───────────────
+# Copia este archivo como $PROFILE y el perfil real se cargara
+# desde la carpeta Tools. No contiene rutas absolutas de usuario.
+#
+# Personaliza la ruta con:
+#   $env:TERMINAL_PROFILE = 'D:\ruta\al\perfil.ps1'
+
+$profileReal = if ($env:TERMINAL_PROFILE) {
+    $env:TERMINAL_PROFILE
+} else {
+    Join-Path $env:USERPROFILE 'Downloads\Projects\Tools\pwsh\profile\Microsoft.PowerShell_profile.ps1'
+}
+
+if (Test-Path -LiteralPath $profileReal) {
+    . $profileReal
+} else {
+    Write-Warning "No se encontro el perfil real en: $profileReal"
+}

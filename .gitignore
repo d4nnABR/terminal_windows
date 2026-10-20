@@ -1,0 +1,5 @@
+# Archivos generados o personales que no deben publicarse
+*.bak
+*.bak.*
+powershell/Microsoft.PowerShell_profile.local.ps1
+*.local.ps1

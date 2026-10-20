@@ -117,10 +117,10 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "commandline": "C:\\Users\\usuario\\Downloads\\Projects\\Tools\\pwsh\\pwsh.exe",
+                "commandline": "%USERPROFILE%\\Downloads\\Projects\\Tools\\pwsh\\pwsh.exe",
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
-                "icon": "C:\\Users\\usuario\\Downloads\\Projects\\Tools\\pwsh\\pwsh.exe",
+                "icon": "%USERPROFILE%\\Downloads\\Projects\\Tools\\pwsh\\pwsh.exe",
                 "name": "PowerShell (Tools)",
                 "source": "Windows.Terminal.PowershellCore"
             }
@@ -152,7 +152,7 @@
             "yellow": "#F9E2AF"
         }
     ],
-    "searchWebDefaultQueryUrl": "www.google.com",
+    "searchWebDefaultQueryUrl": "https://www.google.com/search?q=%s",
     "showTabsFullscreen": false,
     "theme": "Catppuccin Mocha",
     "themes": 
